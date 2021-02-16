@@ -29,7 +29,7 @@ USER craftslab
 WORKDIR /home/craftslab
 ARG ANDROID=/home/craftslab/opt/android
 ENV ANDROID_HOME=$ANDROID
-ENV PATH=$ANDROID/tools/bin:$PATH
+ENV PATH=$ANDROID/cmdline-tools/latest/bin:$ANDROID/tools/bin:$PATH
 RUN curl -L https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -o sdk-tools.zip && \
     mkdir -p $ANDROID; unzip sdk-tools.zip -d $ANDROID > /dev/null && \
     rm -f sdk-tools.zip
